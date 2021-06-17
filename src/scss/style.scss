@@ -1,8 +1,10 @@
-body {
-  background-color: yellow;
-}
+@import "config/_reset.scss";
+@import "config/_variables.scss";
+@import "config/_base.scss";
+@import "config/_mixins.scss";
+@import "config/_media.scss";
 
-img {
-  height: 200px;
-  width: 300px;
-}
+
+// Components
+@import "components/_header.scss";
+@import "components/_layout.scss";
