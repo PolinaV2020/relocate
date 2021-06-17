@@ -83,9 +83,9 @@ function css() {
       cascade: true
     })
   )
-  .pipe(webp_css({
-    webpClass: '.webp',noWebpClass: '.no-webp'
-  }))
+  //.pipe(webp_css({
+   // webpClass: '.webp',noWebpClass: '.no-webp'
+  //}))
   .pipe(dest(path.build.css))
   .pipe(cleanCSS())
   .pipe(rename({
