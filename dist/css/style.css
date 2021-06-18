@@ -497,36 +497,53 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   max-width: 1440px;
-  height: 82px;
+  height: 10vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
   background-color: #ffffff;
 }
 
 .header__wrapper {
-  width: 86%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 86%;
+}
+
+.header__nav {
+  width: 35%;
+  padding-right: 5%;
 }
 
 .header__nav-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: end;
-      align-self: end;
-  width: 50%;
+  width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
 .header__logo {
-  width: 30%;
-  padding-right: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  width: 65%;
   font-family: "Dancing Script";
   font-size: 32px;
   font-weight: bold;
@@ -554,7 +571,7 @@ textarea {
   content: "";
   position: absolute;
   width: 100%;
-  height: 2px;
+  height: 3px;
   left: 0;
   background-color: #000000;
 }
@@ -570,7 +587,7 @@ textarea {
 .header__burger span {
   position: absolute;
   width: 100%;
-  height: 2px;
+  height: 3px;
   left: 0;
   top: 9px;
   background-color: #000000;
@@ -580,33 +597,87 @@ textarea {
   margin: 0 auto;
   max-width: 1440px;
   width: 90%;
-  height: 100vh;
-  background-image: url("../../img/main-background.jpg");
-  background-color: coral;
+  height: 90vh;
+  background: url("../../img/main-background.jpg") no-repeat;
 }
 
 .main__container {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 86%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 6% 0px 6.5%;
 }
 
 .main__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-transform: lowercase;
 }
 
 .main__title-item {
   font-family: "Dancing Script";
   font-size: 120px;
+  font-weight: 400;
   color: #FFC700;
+  z-index: 0;
 }
 
 .main__subtitle {
-  font-family: "Circular Std Black";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Circular Std Medium";
   font-size: 300px;
+  font-weight: 900;
+  line-height: 228px;
   color: #ffffff;
+  z-index: 10;
+}
+
+.main__button {
+  height: 82px;
+  width: 52px;
+}
+
+.main__label {
+  width: 170px;
+  height: 46px;
+  padding-left: 25px;
+  font-family: "Circular Std Medium";
+  font-size: 18px;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 23px;
+}
+
+.main__details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.main__button {
+  margin-right: 5%;
 }
