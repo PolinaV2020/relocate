@@ -2,17 +2,22 @@
   margin: 0 auto;
   max-width: 1440px;
   width: 90%;
-  height: 100vh;
-  background-image: url("../../img/main-background.jpg");
-  background-color: coral;
+  height: 90vh;
+  background: url("../../img/main-background.jpg") no-repeat;
 
   &__container {
+    height: 100%;
     display: flex;
     justify-content: space-between;
-    width: 86%;
+    align-items: center;
+    padding: 0px 6% 0px 6.5%;
   }
 
   &__title{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
     text-transform: lowercase;
   }
 
@@ -20,16 +25,52 @@
     font: {
       family: "Dancing Script";
       size: 120px;
+      weight: 400;
     }
     color: #FFC700;
+    z-index: 0;
   }
 
   &__subtitle{
+    display: flex;
     font: {
-      family: "Circular Std Black";
+      family: "Circular Std Medium";
       size: 300px;
+      weight: 900;
     }
+    line-height: 228px;
     color: #ffffff;
+    z-index: 10;
+  }
+
+  &__button {
+    height: 82px;
+    width: 52px;
+  }
+
+  &__label {
+    width: 170px;
+    height: 46px;
+    padding-left: 25px;
+    font: {
+    family: "Circular Std Medium";
+    size: 18px;
+    weight: 500;
+    }
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 23px;
+  }
+
+  &__details {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__button{
+    margin-right: 5%;
   }
 }
 

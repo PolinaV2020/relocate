@@ -1,31 +1,36 @@
 .header {
   display: flex;
   max-width: 1440px;
-  height: 82px;
+  height: 10vh;
   align-items: center;
+  justify-content: center;
+  margin: 0 auto;
   background-color: #ffffff;
 
   &__wrapper {
-  width: 86%;
   display: flex;
-  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  width: 86%;
   }
 
-  &__nav{
-
+  &__nav {
+    width: 35%;
+    padding-right: 5%;
   }
+
 
   &__nav-list {
   display: flex;
-  align-self: end;
-  width: 50%;
+  width: 100%;
   justify-content: space-between;
   }
 
 
   &__logo {
-    width: 30%;
-    padding-right: 500px;
+    display: flex;
+    justify-content: start;
+    width: 65%;
     font: {
       family: "Dancing Script";
       size: 32px;
@@ -58,7 +63,7 @@
     content: "";
     position: absolute;
     width: 100%;
-    height: 2px;
+    height: 3px;
     left: 0;
     background-color: #000000;
   }
@@ -74,7 +79,7 @@
   & span {
     position: absolute;
     width: 100%;
-    height: 2px;
+    height: 3px;
     left: 0;
     top: 9px;
     background-color: #000000;
