@@ -564,6 +564,7 @@ textarea {
   position: relative;
   width: 30px;
   height: 20px;
+  cursor: pointer;
 }
 
 .header__burger:before,
@@ -591,6 +592,32 @@ textarea {
   left: 0;
   top: 9px;
   background-color: #000000;
+}
+
+.nav-list-link {
+  position: relative;
+  color: #000000;
+  cursor: pointer;
+  line-height: 1.8;
+  text-decoration: none;
+}
+
+.nav-list-link:after {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000000;
+  content: "";
+  -webkit-transition: width 0.3s ease-out;
+  -o-transition: width 0.3s ease-out;
+  transition: width 0.3s ease-out;
+}
+
+.nav-list-link:hover:after,
+.nav-list-link:focus:after {
+  width: 100%;
 }
 
 .main {
