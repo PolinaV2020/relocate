@@ -1,0 +1,56 @@
+.destinations__cards {
+  width: 92%;
+  padding-top: 8%;
+  height: 643px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 553px;
+  width: 310px;
+  padding-top: 25%;
+  border-radius: 10px;
+}
+
+
+.cards-item__title {
+  font: {
+    family: "Circular Std Medium";
+    size: 40px;
+    weight: 900;
+  }
+  color: #FFFFFF;
+}
+
+.cards-item__subtitle {
+  font: {
+    family: "Circular Std Medium";
+    size: 14px;
+    weight: 500;
+  }
+  padding-top: 3px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+
+.destinations__card--paraty {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.92) 100%), url(../../img/paraty.jpg) no-repeat;
+}
+
+.destinations__card--olinda {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.92) 100%) no-repeat, url(../../img/olinda.jpg) no-repeat;
+}
+
+
+.destinations__card--morretes {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.92) 100%) no-repeat, url(../../img/morretes.jpg) no-repeat;
+}
+
+.destinations__card--gramado {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.92) 100%) no-repeat, url(../../img/gramado.jpg) no-repeat;
+}
