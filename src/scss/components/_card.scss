@@ -12,33 +12,60 @@
   flex-direction: column;
   height: 553px;
   width: 310px;
-  padding-top: 25%;
   border-radius: 10px;
-}
 
-
-.cards-item__title {
+  &__title {
+  padding-top: 364px;
   font: {
     family: "Circular Std Medium";
     size: 40px;
     weight: 900;
   }
-  color: #FFFFFF;
+  color: $bright-font-color;
 }
 
-.cards-item__subtitle {
+&__subtitle {
   font: {
     family: "Circular Std Medium";
     size: 14px;
     weight: 500;
   }
-  padding-top: 3px;
+  line-height: 18px;
+  padding-top: 5px;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: $bright-font-color;
+}
+
+&__title-link {
+	position: relative;
+	cursor: pointer;
+	line-height: 0.1; 
+	text-decoration: none; 
+}
+
+&__title-link:after {
+	display: block;
+	position: absolute;
+	left: 0; 
+	width: 0;
+	height: 1.2px; 
+	background-color: $bright-font-color;
+	content: "";
+	transition: width 0.3s ease-out; 
+}
+
+&__title-link:hover:after,
+&__title-link:focus:after {
+	width: 100%; 
+}
 }
 
 
+
+
 .destinations__card--paraty {
+  height: 553px;
+  width: 310px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.92) 100%), url(../../img/paraty.jpg) no-repeat;
 }
 
@@ -53,4 +80,28 @@
 
 .destinations__card--gramado {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.92) 100%) no-repeat, url(../../img/gramado.jpg) no-repeat;
+}
+
+.more__cards--estaing {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.92) 100%) no-repeat, url(../../img/estaing.jpg) no-repeat;
+  width: 342px;
+  height: 510px;
+}
+
+.more__cards--vik {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.92) 100%) no-repeat, url(../../img/vik-i-myrda.jpg) no-repeat;
+  width: 459px;
+  height: 345px;
+}
+
+.more__cards--hamnoy {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.92) 100%) no-repeat, url(../../img/hamnoy.jpg) no-repeat;
+  width: 459px;
+  height: 345px;
+}
+
+.more__cards--montego {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.92) 100%) no-repeat, url(../../img/montego.jpg) no-repeat;
+  width: 938px;
+  height: 345px;
 }

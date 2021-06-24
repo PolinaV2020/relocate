@@ -496,14 +496,18 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 1440px;
-  height: 10vh;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1440px;
+  height: 10vh;
   margin: 0 auto;
   background-color: #ffffff;
 }
@@ -512,6 +516,10 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -635,6 +643,10 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -691,7 +703,7 @@ textarea {
   font-family: "Circular Std Medium";
   font-size: 18px;
   font-weight: 500;
-  color: #FFFFFF;
+  color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 5px;
   line-height: 23px;
@@ -715,20 +727,21 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 1057px;
-  max-width: 1440px;
-  margin: 0 auto;
-  display: flex;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  height: 1057px;
+  max-width: 1440px;
+  margin: 0 auto;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(43.53%, #00BEAC), to(rgba(0, 190, 172, 0)));
   background: -o-linear-gradient(top, #00BEAC 43.53%, rgba(0, 190, 172, 0) 100%);
   background: linear-gradient(180deg, #00BEAC 43.53%, rgba(0, 190, 172, 0) 100%);
@@ -752,6 +765,11 @@ textarea {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 auto;
+}
+
+.more__cards {
+  display: grid;
+  grid-template-areas: "more__cards--estaing more__cards--vik more__cards--hamnoy" "more__cards--estaing more__cards--montego more__cards--montego";
 }
 
 .destinations__cards {
@@ -779,27 +797,55 @@ textarea {
           flex-direction: column;
   height: 553px;
   width: 310px;
-  padding-top: 25%;
   border-radius: 10px;
 }
 
 .cards-item__title {
+  padding-top: 364px;
   font-family: "Circular Std Medium";
   font-size: 40px;
   font-weight: 900;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .cards-item__subtitle {
   font-family: "Circular Std Medium";
   font-size: 14px;
   font-weight: 500;
-  padding-top: 3px;
+  line-height: 18px;
+  padding-top: 5px;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #ffffff;
+}
+
+.cards-item__title-link {
+  position: relative;
+  cursor: pointer;
+  line-height: 0.1;
+  text-decoration: none;
+}
+
+.cards-item__title-link:after {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 1.2px;
+  background-color: #ffffff;
+  content: "";
+  -webkit-transition: width 0.3s ease-out;
+  -o-transition: width 0.3s ease-out;
+  transition: width 0.3s ease-out;
+}
+
+.cards-item__title-link:hover:after,
+.cards-item__title-link:focus:after {
+  width: 100%;
 }
 
 .destinations__card--paraty {
+  height: 553px;
+  width: 310px;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.92))), url(../../img/paraty.jpg) no-repeat;
   background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.92) 100%), url(../../img/paraty.jpg) no-repeat;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.92) 100%), url(../../img/paraty.jpg) no-repeat;
@@ -823,12 +869,42 @@ textarea {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.92) 100%) no-repeat, url(../../img/gramado.jpg) no-repeat;
 }
 
+.more__cards--estaing {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.92))) no-repeat, url(../../img/estaing.jpg) no-repeat;
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.92) 100%) no-repeat, url(../../img/estaing.jpg) no-repeat;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.92) 100%) no-repeat, url(../../img/estaing.jpg) no-repeat;
+  width: 342px;
+  height: 510px;
+}
+
+.more__cards--vik {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.92))) no-repeat, url(../../img/vik-i-myrda.jpg) no-repeat;
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.92) 100%) no-repeat, url(../../img/vik-i-myrda.jpg) no-repeat;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.92) 100%) no-repeat, url(../../img/vik-i-myrda.jpg) no-repeat;
+  width: 459px;
+  height: 345px;
+}
+
+.more__cards--hamnoy {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.92))) no-repeat, url(../../img/hamnoy.jpg) no-repeat;
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.92) 100%) no-repeat, url(../../img/hamnoy.jpg) no-repeat;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.92) 100%) no-repeat, url(../../img/hamnoy.jpg) no-repeat;
+  width: 459px;
+  height: 345px;
+}
+
+.more__cards--montego {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.92))) no-repeat, url(../../img/montego.jpg) no-repeat;
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.92) 100%) no-repeat, url(../../img/montego.jpg) no-repeat;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.92) 100%) no-repeat, url(../../img/montego.jpg) no-repeat;
+  width: 938px;
+  height: 345px;
+}
+
 .description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 385px;
-  width: 67.5%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -839,6 +915,8 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 385px;
+  width: 67.5%;
 }
 
 .description__title {
@@ -873,12 +951,9 @@ textarea {
   color: #0CA296;
 }
 
-.destinations__subtitle {
-  color: #FFFFFF;
-}
-
+.destinations__subtitle,
 .destinations__text {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .more__subtitle {

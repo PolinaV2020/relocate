@@ -1,10 +1,7 @@
 .description {
-  display: flex;
+  @include flex(flex, column, space-between, center);
   height: 385px;
   width: 67.5%;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
 
 
  &__title {
@@ -44,16 +41,14 @@
 }
 
 .more__title {
-  color: #0CA296;
+  color: $base-color;
 }
 
-.destinations__subtitle {
-  color: #FFFFFF;
-}
-
+.destinations__subtitle,
 .destinations__text {
-  color: #FFFFFF;
+  color: $bright-font-color;
 }
+
 
 .more__subtitle {
   color:  #000000;

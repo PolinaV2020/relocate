@@ -1,16 +1,13 @@
 .header {
-  display: flex;
+  @include flex(flex, row, center, center);
   max-width: 1440px;
   height: 10vh;
-  align-items: center;
-  justify-content: center;
   margin: 0 auto;
-  background-color: #ffffff;
+  background-color: $bright-font-color;
+
 
   &__wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex(flex, row, center, center);
   width: 86%;
   }
 
@@ -36,7 +33,7 @@
       size: 32px;
       weight: bold;
     }
-   color: #0CA296;
+   color: $base-color;
   }
 }
 
