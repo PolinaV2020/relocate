@@ -618,9 +618,9 @@ textarea {
   height: 2px;
   background-color: #000000;
   content: "";
-  -webkit-transition: width 0.3s ease-out;
-  -o-transition: width 0.3s ease-out;
-  transition: width 0.3s ease-out;
+  -webkit-transition: width 0.6s ease-out;
+  -o-transition: width 0.6s ease-out;
+  transition: width 0.6s ease-out;
 }
 
 .nav-list-link:hover:after,
@@ -739,12 +739,27 @@ textarea {
           align-items: center;
   -ms-flex-direction: column;
       flex-direction: column;
-  height: 1057px;
+  height: 1012px;
   max-width: 1440px;
   margin: 0 auto;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(43.53%, #00BEAC), to(rgba(0, 190, 172, 0)));
   background: -o-linear-gradient(top, #00BEAC 43.53%, rgba(0, 190, 172, 0) 100%);
   background: linear-gradient(180deg, #00BEAC 43.53%, rgba(0, 190, 172, 0) 100%);
+}
+
+.destinations__cards {
+  width: 92%;
+  height: 643px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .destinations__border {
@@ -761,27 +776,45 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 1057px;
   margin: 0 auto;
+  max-width: 1440px;
 }
 
 .more__cards {
+  width: 91%;
+  height: 650px;
   display: grid;
-  grid-template-areas: "more__cards--estaing more__cards--vik more__cards--hamnoy" "more__cards--estaing more__cards--montego more__cards--montego";
+  grid-gap: 20px;
+  grid-template-columns: 342px 459px 459px;
+  grid-template-rows: 345px 345px;
+  grid-template-areas: "estaing vik hamnoy" "estaing montego montego";
 }
 
-.destinations__cards {
-  width: 92%;
-  padding-top: 8%;
-  height: 643px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.more__cards--estaing {
+  grid-area: estaing;
+}
+
+.more__cards--vik {
+  grid-area: vik;
+}
+
+.more__cards--hamnoy {
+  grid-area: hamnoy;
+}
+
+.more__cards--montego {
+  grid-area: montego;
 }
 
 .cards-item {
@@ -798,14 +831,26 @@ textarea {
   height: 553px;
   width: 310px;
   border-radius: 10px;
+  -webkit-transition: -webkit-transform 0.5s ease 0s;
+  transition: -webkit-transform 0.5s ease 0s;
+  -o-transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
 }
 
 .cards-item__title {
-  padding-top: 364px;
   font-family: "Circular Std Medium";
   font-size: 40px;
   font-weight: 900;
   color: #ffffff;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: -webkit-transform 0.5s ease 0s;
+  transition: -webkit-transform 0.5s ease 0s;
+  -o-transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
 }
 
 .cards-item__subtitle {
@@ -816,16 +861,83 @@ textarea {
   padding-top: 5px;
   text-transform: uppercase;
   color: #ffffff;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: -webkit-transform 0.2s ease 0s;
+  transition: -webkit-transform 0.2s ease 0s;
+  -o-transition: transform 0.2s ease 0s;
+  transition: transform 0.2s ease 0s;
+  transition: transform 0.2s ease 0s, -webkit-transform 0.2s ease 0s;
 }
 
-.cards-item__title-link {
-  position: relative;
+.destinations__title--paraty,
+.destinations__title--morretes,
+.destinations__title--gramado,
+.destinations__title--olinda {
+  padding-top: 364px;
+}
+
+.cards-item:hover {
+  background: -o-linear-gradient(135deg, #55efc4 0%, #000000 74%);
+  background: linear-gradient(315deg, #55efc4 0%, #000000 74%);
+  opacity: 0.5;
+}
+
+.cards-item:hover .cards-item__title {
+  -webkit-transform: translateY(-15%);
+      -ms-transform: translateY(-15%);
+          transform: translateY(-15%);
+}
+
+.cards-item:hover .cards-item__subtitle {
+  -webkit-transform: translateY(60%);
+      -ms-transform: translateY(60%);
+          transform: translateY(60%);
+}
+
+.card__button {
+  display: none;
+}
+
+.cards-item:hover .card__button {
+  display: block;
+  -webkit-box-shadow: 0px 10px 14px -7px #276873;
+          box-shadow: 0px 10px 14px -7px #276873;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #599bb3), to(#408c99));
+  background: -o-linear-gradient(top, #599bb3 5%, #408c99 100%);
+  background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+  background-color: #599bb3;
+  border-radius: 8px;
+  display: inline-block;
   cursor: pointer;
-  line-height: 0.1;
+  color: #ffffff;
+  font-family: "Circular Std Medium";
+  font-size: 20px;
+  font-weight: bold;
+  padding: 13px 32px;
   text-decoration: none;
+  text-shadow: 0px 1px 0px #3d768a;
 }
 
-.cards-item__title-link:after {
+.cards-item:hover .card__button:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #408c99), to(#599bb3));
+  background: -o-linear-gradient(top, #408c99 5%, #599bb3 100%);
+  background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+  background-color: #408c99;
+}
+
+.cards-item:hover .card__button:active {
+  position: relative;
+  top: 1px;
+}
+
+.cards-item:hover .cards-item__title {
+  position: relative;
+  line-height: 1;
+}
+
+.cards-item:hover .cards-item__title:after {
   display: block;
   position: absolute;
   left: 0;
@@ -833,19 +945,21 @@ textarea {
   height: 1.2px;
   background-color: #ffffff;
   content: "";
-  -webkit-transition: width 0.3s ease-out;
-  -o-transition: width 0.3s ease-out;
-  transition: width 0.3s ease-out;
+  -webkit-transition: width 0.6s ease-out;
+  -o-transition: width 0.6s ease-out;
+  transition: width 0.6s ease-out;
 }
 
-.cards-item__title-link:hover:after,
-.cards-item__title-link:focus:after {
+.cards-item:hover .cards-item__title:hover:after,
+.cards-item__title:focus:after {
+  width: 100%;
+}
+
+.cards-item:hover .cards-item__title:focus:after {
   width: 100%;
 }
 
 .destinations__card--paraty {
-  height: 553px;
-  width: 310px;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.92))), url(../../img/paraty.jpg) no-repeat;
   background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.92) 100%), url(../../img/paraty.jpg) no-repeat;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.92) 100%), url(../../img/paraty.jpg) no-repeat;
@@ -874,7 +988,7 @@ textarea {
   background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.92) 100%) no-repeat, url(../../img/estaing.jpg) no-repeat;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.92) 100%) no-repeat, url(../../img/estaing.jpg) no-repeat;
   width: 342px;
-  height: 510px;
+  height: 710px;
 }
 
 .more__cards--vik {
@@ -901,6 +1015,16 @@ textarea {
   height: 345px;
 }
 
+.more__cards-title--estaing {
+  padding-top: 360px;
+}
+
+.more__cards-title--vik,
+.more__cards-title--hamnoy,
+.more__cards-title--montego {
+  padding-top: 200px;
+}
+
 .description {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -915,25 +1039,45 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 385px;
+  height: 459px;
   width: 67.5%;
+  padding: 90px 0px;
+}
+
+.description__title-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
 }
 
 .description__title {
   font-family: "Dancing Script";
-  font-size: 200px;
-  line-height: 166px;
+  font-size: 100px;
+  text-transform: lowercase;
 }
 
 .description__subtitle {
   font-family: "Circular Std Medium";
   font-size: 80px;
   font-weight: 900;
+  text-transform: lowercase;
 }
 
 .description__line {
   width: 16px;
   height: 0px;
+  margin-bottom: 32px;
   border-radius: 40px;
 }
 

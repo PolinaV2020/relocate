@@ -77,11 +77,18 @@
 .destinations {
   @include flex(flex, row, center, center);
   flex-direction: column;
-  height: 1057px;
+  height: 1012px;
   max-width: 1440px;
   margin: 0 auto;
   background: linear-gradient(180deg, $base-color-2 43.53%, rgba(0, 190, 172, 0) 100%);
 
+  &__cards {
+  width: 92%;
+  height: 643px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
 
   &__border {
   background: $base-color-2;
@@ -93,18 +100,41 @@
 }
 
 .more-destinations {
-  display: flex;
-  justify-content: center;
+  @include flex(flex, column, center, center);
+  height: 1057px;
   margin: 0 auto;
+  max-width: 1440px;
 }
 
 
 .more__cards {
+  width: 91%;
+  height: 650px;
   display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 342px 459px 459px;
+  grid-template-rows: 345px 345px;
   grid-template-areas: 
-  "more__cards--estaing more__cards--vik more__cards--hamnoy"
-  "more__cards--estaing more__cards--montego more__cards--montego"
+  "estaing vik hamnoy"
+  "estaing montego montego";
 }
+
+.more__cards--estaing {
+  grid-area: estaing;
+}
+
+.more__cards--vik {
+  grid-area: vik;
+}
+
+.more__cards--hamnoy {
+  grid-area: hamnoy;
+}
+
+.more__cards--montego {
+  grid-area: montego;
+}
+
 
 
 
