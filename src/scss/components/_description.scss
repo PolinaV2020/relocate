@@ -1,18 +1,21 @@
 .description {
-  display: flex;
-  height: 385px;
+  @include flex(flex, column, space-between, center);
+  height: 459px;
   width: 67.5%;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  padding: 90px 0px;
+
+  &__title-box {
+    @include flex(flex, column, center, center);
+    height: 100px;
+  }
 
 
  &__title {
   font: {
     family:  "Dancing Script";
-    size: 200px;
+    size: 100px;
   }
-  line-height: 166px;
+  text-transform: lowercase;
 }
 
 &__subtitle {
@@ -21,11 +24,13 @@
     size: 80px;
     weight: 900;
   }
+  text-transform: lowercase;
 }
 
 &__line {
   width: 16px;
   height: 0px;
+  margin-bottom: 32px;
   border-radius: 40px;
 }
 
@@ -44,16 +49,14 @@
 }
 
 .more__title {
-  color: #0CA296;
+  color: $base-color;
 }
 
-.destinations__subtitle {
-  color: #FFFFFF;
-}
-
+.destinations__subtitle,
 .destinations__text {
-  color: #FFFFFF;
+  color: $bright-font-color;
 }
+
 
 .more__subtitle {
   color:  #000000;

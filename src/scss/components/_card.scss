@@ -1,10 +1,3 @@
-.destinations__cards {
-  width: 92%;
-  padding-top: 8%;
-  height: 643px;
-  display: flex;
-  justify-content: space-between;
-}
 
 .cards-item {
   display: flex;
@@ -12,29 +5,110 @@
   flex-direction: column;
   height: 553px;
   width: 310px;
-  padding-top: 25%;
-  border-radius: 10px;
-}
+  border-radius: $cards-border-radius;
+  transition: transform 0.5s ease 0s;
 
-
-.cards-item__title {
+  &__title {
   font: {
-    family: "Circular Std Medium";
+    family: $main-font;
     size: 40px;
     weight: 900;
   }
-  color: #FFFFFF;
+  color: $bright-font-color;
+  transform: translateY(0);
+  transition: transform 0.5s ease 0s;
 }
 
-.cards-item__subtitle {
+&__subtitle {
   font: {
-    family: "Circular Std Medium";
+    family: $main-font;
     size: 14px;
     weight: 500;
   }
-  padding-top: 3px;
+  line-height: 18px;
+  padding-top: 5px;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: $bright-font-color;
+  transform: translateY(0);
+  transition: transform 0.2s ease 0s;
+}
+}
+
+.destinations__title--paraty,
+.destinations__title--morretes,
+.destinations__title--gramado,
+.destinations__title--olinda {
+  padding-top: 364px;
+}
+
+
+.cards-item:hover {
+  background: linear-gradient(315deg, #55efc4 0%, #000000 74%);
+  opacity: 0.5;
+}
+
+.cards-item:hover .cards-item__title {
+  transform: translateY(-15%);
+}
+
+.cards-item:hover .cards-item__subtitle {
+  transform: translateY(60%);
+}
+
+.card__button {
+  display: none;
+}
+
+ .cards-item:hover .card__button{
+  display: block;
+	box-shadow: 0px 10px 14px -7px #276873;
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background-color:#599bb3;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: $main-font;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+
+.cards-item:hover .card__button:hover {
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+}
+
+.cards-item:hover .card__button:active {
+	position:relative;
+	top:1px;
+}
+
+.cards-item:hover .cards-item__title {
+	position: relative;
+	line-height: 1; 
+}
+
+.cards-item:hover .cards-item__title:after {
+	display: block;
+	position: absolute;
+	left: 0; 
+	width: 0;
+	height: 1.2px; 
+	background-color: $bright-font-color;
+	content: "";
+	transition: width 0.6s ease-out; 
+}
+
+.cards-item:hover .cards-item__title:hover:after,
+.cards-item__title:focus:after {
+	width: 100%; 
+}
+
+.cards-item:hover .cards-item__title:focus:after {
+	width: 100%; 
 }
 
 
@@ -54,3 +128,42 @@
 .destinations__card--gramado {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.92) 100%) no-repeat, url(../../img/gramado.jpg) no-repeat;
 }
+
+.more__cards--estaing {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.92) 100%) no-repeat, url(../../img/estaing.jpg) no-repeat;
+  width: 342px;
+  height: 710px;
+}
+
+.more__cards--vik {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.92) 100%) no-repeat, url(../../img/vik-i-myrda.jpg) no-repeat;
+  width: 459px;
+  height: 345px;
+}
+
+.more__cards--hamnoy {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.92) 100%) no-repeat, url(../../img/hamnoy.jpg) no-repeat;
+  width: 459px;
+  height: 345px;
+}
+
+.more__cards--montego {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.92) 100%) no-repeat, url(../../img/montego.jpg) no-repeat;
+  width: 938px;
+  height: 345px;
+}
+
+.more__cards-title--estaing {
+  padding-top: 360px;
+}
+
+
+.more__cards-title--vik,
+.more__cards-title--hamnoy,
+.more__cards-title--montego {
+  padding-top: 200px;
+}
+
+
+
+// Animation

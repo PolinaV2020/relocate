@@ -8,9 +8,7 @@
   &__container {
     height: 100%;
     width: 90%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex(flex, row, space-between, center);
     padding: 0px 6% 0px 6.5%;
   }
 
@@ -40,7 +38,7 @@
       weight: 900;
     }
     line-height: 228px;
-    color: #ffffff;
+    color: $bright-font-color;
     z-index: 10;
   }
 
@@ -58,7 +56,7 @@
     size: 18px;
     weight: 500;
     }
-    color: #FFFFFF;
+    color: $bright-font-color;
     text-transform: uppercase;
     letter-spacing: 5px;
     line-height: 23px;
@@ -77,19 +75,23 @@
 
 
 .destinations {
-  display: flex;
+  @include flex(flex, row, center, center);
   flex-direction: column;
-  height: 1057px;
+  height: 1012px;
   max-width: 1440px;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(180deg, #00BEAC 43.53%, rgba(0, 190, 172, 0) 100%);
+  background: linear-gradient(180deg, $base-color-2 43.53%, rgba(0, 190, 172, 0) 100%);
 
+  &__cards {
+  width: 92%;
+  height: 643px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
 
   &__border {
-  background: #00BEAC;
+  background: $base-color-2;
   height: 40px;
   background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4), 75%, transparent 75%, transparent 100%);
   background-size: 1px 1px;
@@ -98,10 +100,41 @@
 }
 
 .more-destinations {
-  display: flex;
-  justify-content: center;
+  @include flex(flex, column, center, center);
+  height: 1057px;
   margin: 0 auto;
+  max-width: 1440px;
 }
+
+
+.more__cards {
+  width: 91%;
+  height: 650px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 342px 459px 459px;
+  grid-template-rows: 345px 345px;
+  grid-template-areas: 
+  "estaing vik hamnoy"
+  "estaing montego montego";
+}
+
+.more__cards--estaing {
+  grid-area: estaing;
+}
+
+.more__cards--vik {
+  grid-area: vik;
+}
+
+.more__cards--hamnoy {
+  grid-area: hamnoy;
+}
+
+.more__cards--montego {
+  grid-area: montego;
+}
+
 
 
 
