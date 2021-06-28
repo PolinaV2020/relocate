@@ -54,7 +54,6 @@
 .location__details {
   padding-top: 10px;
   display: flex;
-  height: 600px;
   justify-content: space-between;
   max-width: 1440px;
   margin: 0 auto;
@@ -68,7 +67,8 @@
 }
 
 .location__article {
-  height: 550px;
+  padding-top: 40px;
+  height: 525px;
   @include flex(flex, column, space-around, start);
 }
 
@@ -88,21 +88,69 @@
   height: 100%;
 }
 
-.more__location-articles {
-  display: grid;
+.more-location-articles {
+  padding-top: 26px;
+  width: 100%;
+}
+
+.more-location-articles__container {
+  padding-top: 26px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.more-location-articles__title {
+  @include location-title;
+}
+
+.location-articles-item {
+  height: 202px;
+  width: 194px;
+  background-size: cover;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 3.6528px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.articles-item__title {
+  padding-top: 60%;
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+    font: {
+    family: $main-font;
+    size: 14px;
+    weight: 900;
+  }
+  line-height: 18px;
+  color: $bright-font-color;
+}
+
+
+.articles-item__site {
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px 0px 20px 0px;
+    font: {
+    family: $main-font;
+    size: 9px;
+    weight: 500;
+  }
+  text-transform: uppercase;
+  color: $site-link-font-color;
 }
 
 
 .expat-article {
-  background-image: url("../../img/expat-image.jpg");
+  background-image: linear-gradient(356.3deg, rgba(0, 0, 0, 0.6) 3.4%, rgba(0, 0, 0, 0) 92.42%), url("../../img/expat-image.jpg");
 }
 
 .best-things-article {
-  background-image: url("../../img/best-things-image.jpg");
+  background-image: linear-gradient(356.3deg, rgba(0, 0, 0, 0.6) 3.4%, rgba(0, 0, 0, 0) 92.42%), url("../../img/best-things-image.jpg");
 }
 
 .worth-article {
-  background-image: url("../../img/worth-image.jpg");
+  background-image: linear-gradient(356.3deg, rgba(0, 0, 0, 0.6) 3.4%, rgba(0, 0, 0, 0) 92.42%), url("../../img/worth-image.jpg");
 }
 
 
@@ -130,11 +178,7 @@
 }
 
 .location__statistic {
-  display: flex;
-  height: 132px;
-  width: 504px;
-  border: 1px solid $dark-font-color;
-  border-radius: $cards-border-radius;
+  @include table;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
@@ -146,8 +190,13 @@
   flex-direction: column;
   align-items: center;
   width: 33.3%;
+}
+
+.location__size,
+.location__weather {
   border-right: 1px solid $dark-font-color;
 }
+
 
 .location__size-description {
   display: flex;
