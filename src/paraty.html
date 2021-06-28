@@ -13,11 +13,11 @@
   <div class="location__information">
     <nav class="location__nav">
       <ul class="location__nav-list">
-        <li class="location__nav-item"><a href="" class="location__nav-link">About</a></li>
-        <li class="location__nav-item"><a href="" class="location__nav-link">Neighborhoods</a></li>
-        <li class="location__nav-item"><a href="" class="location__nav-link">Schools</a></li>
-        <li class="location__nav-item"><a href="" class="location__nav-link">Jobs</a></li>
-        <li class="location__nav-item"><a href="" class="location__nav-link">Leasure and parks</a></li>
+        <li class="location__nav-item"><a href="#" class="location__nav-link">About</a></li>
+        <li class="location__nav-item"><a href="#" class="location__nav-link">Neighborhoods</a></li>
+        <li class="location__nav-item"><a href="#" class="location__nav-link">Schools</a></li>
+        <li class="location__nav-item"><a href="#" class="location__nav-link">Jobs</a></li>
+        <li class="location__nav-item"><a href="#" class="location__nav-link">Leasure and parks</a></li>
       </ul>
     </nav>
     <div class="location__article">
@@ -33,35 +33,41 @@
 
     <div class="location__statistic">
     <div class="location__size">
-      <h5 class="location__size-title">City size</h5>
-      <img class="location__size-icon" src="img/city-size-icon.png" id="size-icon" alt="City size">
-      <label class="location__size-description"for="size-icon">
-        <p class="city-size-number">35,730</p>
-        <p class="city-size-year">2009</p>
+      <h5 class="location__size-title location__statistic-title">City size</h5>
+      <label class="location__size-description" for="size-icon">
+        <img class="location__size-icon" src="img/city-size-icon.png" id="size-icon" alt="City size">
+        <div class="city-size-data">
+          <p class="city-size-number location__description">35,730</p>
+          <p class="city-size-year">2009</p>
+        </div>
       </label>
     </div>
 
     <div class="location__weather">
-      <h5 class="location__weather-title">Weather</h5>
-      <img class="location__weather-icon sunny-icon" src="img/sunny-icon.png" id="sunny-icon" alt="Sunny">
-      <label class="location__weather-description"for="sunny-icon">
-      <img class="location__weather-icon rainy-icon" src="img/rainy-icon.png" id="rainy-icon" alt="Rainy">
-      <label class="location__weather-description"for="rainy-icon">
+      <h5 class="location__weather-title location__statistic-title">Weather</h5>
+      <label class="location__weather-description location__description"for="sunny-icon">
+        <img class="location__weather-icon sunny-icon" src="img/sunny-icon.png" id="sunny-icon" alt="Sunny">
+        High - 29°C
+      </label>
+      <label class="location__weather-description location__description" for="rainy-icon">
+       <img class="location__weather-icon rainy-icon" src="img/rainy-icon.png" id="rainy-icon" alt="Rainy"> 
+        LOW - 19°C
       </label>
     </div>
 
     <div class="location__safety">
-      <h5 class="location__safety-title">Safety</h5>
-      <img class="location__safety-icon" src="img/safety-icon.png" id="safety-icon" alt="Safety">
-      <label class="location__safety-description"for="safety-icon">
+      <h5 class="location__safety-title location__statistic-title">Safety</h5>
+      <label class="location__safety-description location__description" for="safety-icon">
+        <img class="location__safety-icon" src="img/safety-icon.png" id="safety-icon" alt="Safety">
+        4.8
       </label>
     </div>
   </div>
 
   <div class="location__photos">
-    <img class="location__photos-item location__photo--top" src="img/paraty-photo-left.jpg" alt="Paraty">
-    <img class="location__photos-item location__photo--left" src="img/paraty-photo-left.jpg" alt="Paraty">
-    <img class="location__photos-item location__photo--left" src="img/paraty-photo-right.jpg" alt="Paraty">
+    <div class="location__photos-item location__photo--top"></div>
+    <div class="location__photos-item location__photo--left"></div>
+    <div class="location__photos-item location__photo--right"></div>
   </div>
 
 
