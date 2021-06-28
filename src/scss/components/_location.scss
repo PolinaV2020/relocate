@@ -344,7 +344,7 @@
 }
 
 .get-in-touch__text-title {
-    font: {
+  font: {
     size: 24px;
     weight: 900;
   }
@@ -373,10 +373,13 @@
     size: 16px;
     weight: 900;
   }
-  color: $base-color;
   border-radius: $cards-border-radius;
   border: none;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.get-in-touch__link {
+   color: $base-color;
 }
 
 .get-in-touch__button:hover {
