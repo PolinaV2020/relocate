@@ -15,3 +15,11 @@
   text-transform: uppercase;
   color: $dark-font-color;
 }
+
+@mixin table {
+  display: flex;
+  height: 132px;
+  width: 504px;
+  border: 1px solid $dark-font-color;
+  border-radius: $cards-border-radius;
+}

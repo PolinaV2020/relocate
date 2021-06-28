@@ -1,0 +1,54 @@
+.family-package__title {
+  padding: 40px 0px 12px 0px;
+  @include location-title;
+}
+
+.family-costs{
+   @include table;
+}
+
+.family-costs-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-right: 1px solid $dark-font-color;
+}
+
+.family-costs-item:last-child {
+  border: none;
+}
+
+.package-costs__title {
+    font: {
+    family: $main-font;
+    size: 12px;
+    weight: 900;
+  }
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.package-costs__money {
+  display: flex;
+  font-family: $main-font;
+  color: $black-font-color;
+  text-transform: uppercase;
+}
+
+.package-costs__currency {
+  font-size: 14px;
+}
+
+.package-costs__amount {
+  font-size: 22px;
+}
+
+
+.package-costs__description {
+    font: {
+    family: $main-font;
+    size: 10px;
+  }
+  line-height: 13px;
+  color: $dark-font-color;
+}
