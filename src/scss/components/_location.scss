@@ -1,0 +1,116 @@
+.location__main {
+  width: 1440px;
+  height: 595px;
+  margin: 0 auto;
+}
+
+.paraty__main {
+ background: linear-gradient(rgba(196, 196, 196, 0.5) 100%, rgba(196, 196, 196, 1) 0%), url("../../img/paraty-background.png") no-repeat;
+ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.location__main-wrap {
+  width: 90%;
+  max-width: 1300px;
+  height: 542px;
+  margin: 0 auto;
+}
+
+
+.paraty__main-wrap {
+  background: linear-gradient(356.3deg, rgba(0, 0, 0, 0.6) 3.4%, rgba(0, 0, 0, 0) 92.42%) no-repeat, url("../../img/paraty-image.png") no-repeat;
+  filter: drop-shadow(0px 27px 22px rgba(0, 0, 0, 0.15));
+  border-radius: 20px;
+}
+
+.location__name {
+   height: 100%;
+  @include flex(flex, column, center, center);
+}
+
+.location__title {
+  font: {
+      family: $main-font;
+      size: calc(160px + 16 * ((100vw - 320px) / (1280 - 320)));
+      weight: 900;
+  }
+  color: $bright-font-color;
+}
+
+
+.location__subtitle {
+  @include flex(flex, row, center, center);
+  font: {
+    family: $main-font;
+    size: 14px;
+    weight: 500;
+  }
+  text-transform: uppercase;
+  color: $bright-font-color;
+}
+
+
+.location__details {
+  height: 600px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.location__nav-list {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  width: 50%;
+  max-width: 647px;
+}
+
+.location__nav-item {
+  position: relative;
+  font: {
+    family: $main-font;
+    size: 14px;
+    weight: 500;
+  }
+  text-transform: uppercase;
+  color: $dark-font-color;
+  cursor: pointer;
+  text-decoration: none; 
+}
+
+
+.location__nav-item:hover {
+	color: $hovered-links-color; 
+}
+
+
+.location__photos {
+  display: grid;
+  grid-template-areas: 
+  "top top"
+  "left right"
+}
+
+.location__photos-item {
+  border-radius: 10px;
+}
+
+.location__photo--top {
+  width: 504px;
+  height: 194px; 
+  grid-area: top;
+}
+
+
+.location__photo--left {
+  width: 247px;
+  height: 194px;
+  grid-area: left;
+}
+
+
+.location__photo--right {
+  width: 247px;
+  height: 194px;
+  grid-area: right;
+}

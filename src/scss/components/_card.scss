@@ -43,8 +43,8 @@
 
 
 .cards-item:hover {
-  background: linear-gradient(315deg, #55efc4 0%, #000000 74%);
-  opacity: 0.5;
+  background: linear-gradient(315deg, #55efc4 0%, #000000 74%) url(../../img/estaing.jpg);
+  opacity: 0.95;
 }
 
 .cards-item:hover .cards-item__title {
