@@ -52,6 +52,7 @@
 
 
 .location__details {
+  padding-top: 10px;
   display: flex;
   height: 722px;
   justify-content: space-between;
@@ -90,13 +91,7 @@
 
 .location__nav-item {
   position: relative;
-  font: {
-    family: $main-font;
-    size: 14px;
-    weight: 500;
-  }
-  text-transform: uppercase;
-  color: $dark-font-color;
+  @include location-title;
   cursor: pointer;
   text-decoration: none; 
 }
@@ -112,14 +107,26 @@
 
 .location__statistic {
   display: flex;
+  height: 132px;
+  width: 504px;
   border: 1px solid $dark-font-color;
   border-radius: $cards-border-radius;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.location__size {
+.location__size,
+.location__weather,
+.location__safety {
+  display: flex;
+  padding-top: 28px;
+  flex-direction: column;
+  align-items: center;
   width: 33.3%;
   border-right: 1px solid $dark-font-color;
+}
+
+.location__size-description {
+  display: flex;
 }
 
 .location__weather {
@@ -128,34 +135,67 @@
 }
 
 
+.location__statistic-title {
+  padding-bottom: 23px;
+  @include location-title;
+}
+
+.location__description {
+ font: {
+    family: $main-font;
+    size: 14px;
+    weight: 500;
+  }
+  text-transform: uppercase;
+  color: $black-font-color;
+  line-height: 17.71px;
+}
+
+.city-size-data {
+  padding-left: 10px;
+}
+
+
+.city-size-year {
+   font: {
+    family: $main-font;
+    size: 12px;
+  }
+  text-transform: uppercase;
+  color: $dark-font-color;
+  line-height: 15px;
+}
 
 .location__photos {
   display: grid;
+  align-items: center;
+  padding-top: 40px;
+  grid-template-rows: 194px 194px;
+  grid-template-columns: 247px 247px;
+  grid-gap: 10px;
   grid-template-areas: 
   "top top"
-  "left right"
+  "left right";
 }
+
 
 .location__photos-item {
   border-radius: 10px;
+  object-fit: contain;
 }
 
 .location__photo--top {
-  width: 504px;
-  height: 194px; 
   grid-area: top;
+  background: url("../../img/paraty-photo-top.jpg") cover;
+  background-size: cover;
 }
-
 
 .location__photo--left {
-  width: 247px;
-  height: 194px;
   grid-area: left;
+  background: url("../../img/paraty-photo-left.jpg");
 }
 
-
 .location__photo--right {
-  width: 247px;
-  height: 194px;
   grid-area: right;
+  background: url("../../img/paraty-photo-right.jpg");
 }

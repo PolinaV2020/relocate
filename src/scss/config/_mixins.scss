@@ -5,3 +5,13 @@
   justify-content: $justify-content;
   align-items: $align-items;
 }
+
+@mixin location-title {
+  font: {
+    family: $main-font;
+    size: 14px;
+    weight: 500;
+  }
+  text-transform: uppercase;
+  color: $dark-font-color;
+}

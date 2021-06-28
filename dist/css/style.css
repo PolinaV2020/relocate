@@ -1286,6 +1286,7 @@ html {
 }
 
 .location__details {
+  padding-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1373,15 +1374,36 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 132px;
+  width: 504px;
   border: 1px solid #565656;
   border-radius: 10px;
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.location__size {
+.location__size,
+.location__weather,
+.location__safety {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 28px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 33.3%;
   border-right: 1px solid #565656;
+}
+
+.location__size-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .location__weather {
@@ -1389,29 +1411,66 @@ html {
   border-right: 1px solid #565656;
 }
 
+.location__statistic-title {
+  padding-bottom: 23px;
+  font-family: "Circular Std Medium";
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #565656;
+}
+
+.location__description {
+  font-family: "Circular Std Medium";
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #000000;
+  line-height: 17.71px;
+}
+
+.city-size-data {
+  padding-left: 10px;
+}
+
+.city-size-year {
+  font-family: "Circular Std Medium";
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #565656;
+  line-height: 15px;
+}
+
 .location__photos {
   display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 40px;
+  grid-template-rows: 194px 194px;
+  grid-template-columns: 247px 247px;
+  grid-gap: 10px;
   grid-template-areas: "top top" "left right";
 }
 
 .location__photos-item {
   border-radius: 10px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .location__photo--top {
-  width: 504px;
-  height: 194px;
   grid-area: top;
+  background: url("../../img/paraty-photo-top.jpg") cover;
+  background-size: cover;
 }
 
 .location__photo--left {
-  width: 247px;
-  height: 194px;
   grid-area: left;
+  background: url("../../img/paraty-photo-left.jpg");
 }
 
 .location__photo--right {
-  width: 247px;
-  height: 194px;
   grid-area: right;
+  background: url("../../img/paraty-photo-right.jpg");
 }
