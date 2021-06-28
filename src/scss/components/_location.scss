@@ -54,21 +54,21 @@
 .location__details {
   padding-top: 10px;
   display: flex;
-  height: 722px;
+  height: 600px;
   justify-content: space-between;
   max-width: 1440px;
   margin: 0 auto;
+  background-color: $location-background-color;
 }
 
 
 .location__information {
   @include flex(flex, column, space-between, center);
   width: 50%;
-  height: 722px;
 }
 
 .location__article {
-  height: 100%;
+  height: 550px;
   @include flex(flex, column, space-around, start);
 }
 
@@ -81,6 +81,30 @@
   line-height: 25px;
   color: $dark-font-color;
 }
+
+
+.location-articles-item {
+  width: 100%;
+  height: 100%;
+}
+
+.more__location-articles {
+  display: grid;
+}
+
+
+.expat-article {
+  background-image: url("../../img/expat-image.jpg");
+}
+
+.best-things-article {
+  background-image: url("../../img/best-things-image.jpg");
+}
+
+.worth-article {
+  background-image: url("../../img/worth-image.jpg");
+}
+
 
 .location__nav-list {
   display: flex;
@@ -180,22 +204,25 @@
 
 
 .location__photos-item {
+  height: 100%;
+  width: 100%;
   border-radius: 10px;
   object-fit: contain;
+  background-size: cover;
 }
 
 .location__photo--top {
   grid-area: top;
-  background: url("../../img/paraty-photo-top.jpg") cover;
-  background-size: cover;
+  background-image: url("../../img/paraty-photo-top.jpg");
 }
 
 .location__photo--left {
+
   grid-area: left;
-  background: url("../../img/paraty-photo-left.jpg");
+  background-image: url("../../img/paraty-photo-left.jpg");
 }
 
 .location__photo--right {
   grid-area: right;
-  background: url("../../img/paraty-photo-right.jpg");
+  background-image: url("../../img/paraty-photo-right.jpg");
 }
