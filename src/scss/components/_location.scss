@@ -5,10 +5,10 @@
 }
 
 .paraty__main {
- background: linear-gradient(rgba(196, 196, 196, 0.5) 100%, rgba(196, 196, 196, 1) 0%), url("../../img/paraty-background.png") no-repeat;
+ background: url("../../img/paraty-gradient.png") bottom, url("../../img/paraty-background.png");
+ background-repeat: no-repeat;
  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-
 
 .location__main-wrap {
   width: 90%;
@@ -19,7 +19,7 @@
 
 
 .paraty__main-wrap {
-  background: linear-gradient(356.3deg, rgba(0, 0, 0, 0.6) 3.4%, rgba(0, 0, 0, 0) 92.42%) no-repeat, url("../../img/paraty-image.png") no-repeat;
+  background: linear-gradient(356.3deg, rgba(0, 0, 0, 0.6) 3.4%, rgba(0, 0, 0, 0) 92.42%), url("../../img/paraty-image.png");
   filter: drop-shadow(0px 27px 22px rgba(0, 0, 0, 0.15));
   border-radius: 20px;
 }
@@ -50,20 +50,26 @@
   color: $bright-font-color;
 }
 
-
 .location__details {
+  margin: 0 auto;
+  max-width: 1440px;
+  background-color: $location-background-color;
+}
+
+.location__details-wrap {
   padding: 10px 0px 130px 0px;
   display: flex;
   justify-content: space-between;
-  max-width: 1440px;
+  max-width: 1300px;
+  width: 90%;
   margin: 0 auto;
-  background-color: $location-background-color;
 }
 
 
 .location__information {
   @include flex(flex, column, space-between, center);
   width: 50%;
+  max-height: 892px;
 }
 
 .location__article {
@@ -281,6 +287,13 @@
 .location__photo--right {
   grid-area: right;
   background-image: url("../../img/paraty-photo-right.jpg");
+}
+
+.get-in-touch {
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: $location-background-color
 }
 
 
