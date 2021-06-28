@@ -52,7 +52,7 @@
 
 
 .location__details {
-  padding-top: 10px;
+  padding: 10px 0px 130px 0px;
   display: flex;
   justify-content: space-between;
   max-width: 1440px;
@@ -97,6 +97,7 @@
   padding-top: 26px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .more-location-articles__title {
@@ -158,7 +159,8 @@
   display: flex;
   justify-content: space-between;
   padding-top: 10px;
-  max-width: 647px;
+  width: 647px;
+  color: $dark-font-color;
 }
 
 .location__nav-item {
@@ -168,8 +170,12 @@
   text-decoration: none; 
 }
 
+.location__nav-link {
+  @include location-title;
+}
 
-.location__nav-item:hover {
+
+.location__nav-link:hover {
 	color: $hovered-links-color; 
 }
 
@@ -179,6 +185,7 @@
 
 .location__statistic {
   @include table;
+  height: 132px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
@@ -275,3 +282,94 @@
   grid-area: right;
   background-image: url("../../img/paraty-photo-right.jpg");
 }
+
+
+.get-in-touch__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1300px;
+  height: 133px;
+  background-color: $base-color-2;
+  border-radius: $cards-border-radius;
+}
+
+.get-in-touch__image {
+  display: flex;
+  width: 25%;
+  margin: 0 auto;
+  padding-bottom: 70px;
+  height: 174px;
+  width: 174px;
+}
+
+.get-in-touch__image--red {
+   display: flex;
+  align-self: flex-end;
+  height: 174px;
+  width: 174px;
+  background: url("../../img/red-suitcases.png") no-repeat;
+  z-index: 5;
+}
+
+.get-in-touch__image--yellow {
+  display: flex;
+  align-self: flex-end;
+  height: 56px;
+  width: 116px;
+  background: url("../../img/yellow-suitcases.png") no-repeat;
+  z-index: 10;
+}
+
+
+.get-in-touch__text {
+  width: 50%;
+  font-family: $main-font;
+  color: $bright-font-color;
+}
+
+.get-in-touch__text-title {
+    font: {
+    size: 24px;
+    weight: 900;
+  }
+  line-height: 30px;
+}
+
+.get-in-touch__text-description {
+  padding-top: 7px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.get-in-touch__button-container {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.get-in-touch__button {
+  margin: 0 auto;
+  width: 139px;
+  height: 41px;
+    font: {
+    family: $main-font;
+    size: 16px;
+    weight: 900;
+  }
+  color: $base-color;
+  border-radius: $cards-border-radius;
+  border: none;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.get-in-touch__button:hover {
+  opacity: 0.9;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+}
+
+
+
