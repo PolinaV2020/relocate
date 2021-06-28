@@ -1,20 +1,30 @@
-.family-package__title {
+.package__title {
   padding: 40px 0px 12px 0px;
   @include location-title;
 }
 
-.family-costs{
+.package-costs{
    @include table;
+   height: 176px;
 }
 
-.family-costs-item {
+.package-costs-box {
   display: flex;
+  height: 80%;
+  width: 80%;
+  margin: 0 auto;
   flex-direction: column;
   justify-content: space-around;
+}
+
+.package-costs-item {
+  display: flex;
+  width: 25%;
+  align-items: center;
   border-right: 1px solid $dark-font-color;
 }
 
-.family-costs-item:last-child {
+.package-costs-item:last-child {
   border: none;
 }
 
