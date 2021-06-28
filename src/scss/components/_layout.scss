@@ -1,19 +1,19 @@
 .main {
   margin: 0 auto;
   max-width: 1440px;
-  min-height: 812px;
-  height: 90vh;
+  height: 812px;
   background: linear-gradient(356.3deg, rgba(0, 0, 0, 0.6) 3.4%, rgba(0, 0, 0, 0) 92.42%), url("../../img/main-background.jpg") no-repeat;
 
   &__container {
-    height: 100%;
     width: 90%;
-    @include flex(flex, row, space-between, center);
-    padding: 0px 6% 0px 6.5%;
+    margin: 0 auto;
+    @include flex(flex, row, space-between, flex-end);
+    padding: 16% 6% 0px 6.5%;
   }
 
   &__title{
     display: flex;
+    justify-content: flex-end;
     height: 100%;
     flex-direction: column;
     justify-content: center;
@@ -22,8 +22,8 @@
 
   &__title-item{
     font: {
-      family: "Dancing Script";
-      size: 120px;
+      family: $second-font;
+      size: calc(120px + 16 * ((100vw - 320px) / (1280 - 320)));;
       weight: 400;
     }
     color: #FFC700;
@@ -32,9 +32,10 @@
 
   &__subtitle{
     display: flex;
+    align-items: flex-end;
     font: {
-      family: "Circular Std Medium";
-      size: 300px;
+      family: $main-font;
+      size: calc(300px + 16 * ((100vw - 320px) / (1280 - 320)));;
       weight: 900;
     }
     line-height: 228px;
@@ -43,7 +44,7 @@
   }
 
   &__button {
-    height: 82px;
+    height: 80px;
     width: 52px;
   }
 
@@ -52,7 +53,7 @@
     height: 46px;
     padding-left: 25px;
     font: {
-    family: "Circular Std Medium";
+    family: $main-font;
     size: 18px;
     weight: 500;
     }
@@ -64,12 +65,9 @@
 
   &__details {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    justify-content: flex-end;
     height: 100%;
-  }
-
-  &__button{
-    margin-right: 5%;
   }
 }
 
@@ -77,8 +75,9 @@
 .destinations {
   @include flex(flex, row, center, center);
   flex-direction: column;
-  height: 1012px;
+  height: 1100px;
   max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
   background: linear-gradient(180deg, $base-color-2 43.53%, rgba(0, 190, 172, 0) 100%);
 
@@ -91,19 +90,21 @@
 }
 
   &__border {
-  background: $base-color-2;
-  height: 40px;
-  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4), 75%, transparent 75%, transparent 100%);
-  background-size: 1px 1px;
-  border: none;
+  max-width: 1440px;
+  margin: 0 auto;
+	height: 40px;
+	color: $base-color-2;
+	background-image: linear-gradient(90deg, $base-color-2, $bright-font-color 96%, transparent 33.33%, transparent 100%);
+	background-size: 3px 100%;
   }
 }
 
 .more-destinations {
   @include flex(flex, column, center, center);
-  height: 1057px;
+  height: 1300px;
   margin: 0 auto;
   max-width: 1440px;
+  padding-bottom: 21px;
 }
 
 

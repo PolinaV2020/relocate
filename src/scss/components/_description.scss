@@ -1,6 +1,6 @@
 .description {
   @include flex(flex, column, space-between, center);
-  height: 459px;
+  height: 380px;
   width: 67.5%;
   padding: 90px 0px;
 
@@ -13,7 +13,7 @@
  &__title {
   font: {
     family:  "Dancing Script";
-    size: 100px;
+    size: calc(100px + 16 * ((100vw - 320px) / (1280 - 320)));;
   }
   text-transform: lowercase;
 }
@@ -21,7 +21,7 @@
 &__subtitle {
   font: {
     family: "Circular Std Medium";
-    size: 80px;
+    size: calc(80px + 16 * ((100vw - 320px) / (1280 - 320)));;
     weight: 900;
   }
   text-transform: lowercase;
