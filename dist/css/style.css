@@ -1218,9 +1218,8 @@ html {
 }
 
 .paraty__main {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(196, 196, 196, 0.5)), color-stop(0%, #c4c4c4)), url("../../img/paraty-background.png") no-repeat;
-  background: -o-linear-gradient(rgba(196, 196, 196, 0.5) 100%, #c4c4c4 0%), url("../../img/paraty-background.png") no-repeat;
-  background: linear-gradient(rgba(196, 196, 196, 0.5) 100%, #c4c4c4 0%), url("../../img/paraty-background.png") no-repeat;
+  background: url("../../img/paraty-gradient.png") bottom, url("../../img/paraty-background.png");
+  background-repeat: no-repeat;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -1233,8 +1232,8 @@ html {
 }
 
 .paraty__main-wrap {
-  background: -o-linear-gradient(93.7deg, rgba(0, 0, 0, 0.6) 3.4%, rgba(0, 0, 0, 0) 92.42%) no-repeat, url("../../img/paraty-image.png") no-repeat;
-  background: linear-gradient(356.3deg, rgba(0, 0, 0, 0.6) 3.4%, rgba(0, 0, 0, 0) 92.42%) no-repeat, url("../../img/paraty-image.png") no-repeat;
+  background: -o-linear-gradient(93.7deg, rgba(0, 0, 0, 0.6) 3.4%, rgba(0, 0, 0, 0) 92.42%), url("../../img/paraty-image.png");
+  background: linear-gradient(356.3deg, rgba(0, 0, 0, 0.6) 3.4%, rgba(0, 0, 0, 0) 92.42%), url("../../img/paraty-image.png");
   -webkit-filter: drop-shadow(0px 27px 22px rgba(0, 0, 0, 0.15));
           filter: drop-shadow(0px 27px 22px rgba(0, 0, 0, 0.15));
   border-radius: 20px;
@@ -1286,6 +1285,12 @@ html {
 }
 
 .location__details {
+  margin: 0 auto;
+  max-width: 1440px;
+  background-color: #F5FFFE;
+}
+
+.location__details-wrap {
   padding: 10px 0px 130px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1293,9 +1298,9 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  max-width: 1440px;
+  max-width: 1300px;
+  width: 90%;
   margin: 0 auto;
-  background-color: #F5FFFE;
 }
 
 .location__information {
@@ -1313,6 +1318,7 @@ html {
       -ms-flex-align: center;
           align-items: center;
   width: 50%;
+  max-height: 892px;
 }
 
 .location__article {
@@ -1570,6 +1576,15 @@ html {
 .location__photo--right {
   grid-area: right;
   background-image: url("../../img/paraty-photo-right.jpg");
+}
+
+.get-in-touch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: #F5FFFE;
 }
 
 .get-in-touch__container {
