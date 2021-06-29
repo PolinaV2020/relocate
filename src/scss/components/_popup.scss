@@ -9,12 +9,9 @@
   opacity: 0;
   visibility: hidden;
   z-index: 30;
+  transition: all 0.8s ease 0s;
 }
 
-.popup:target {
-  opacity: 1;
-  visibility: visible;
-}
 
 .popup__body {
  min-height: 100%;
@@ -37,12 +34,21 @@
   }
   line-height: 30px;
   font-family: $main-font;
+  opacity: 0;
+  transform: translateY(0px, -100%);
+  transition: all 0.8s ease 0s;
 }
 
 .popup__title {
-  padding-bottom: 20px;
+  padding: 20px 0px;
 }
 
+
+.popup__input {
+ margin: 0 auto;
+ height: 41px;
+ border: none; 
+}
 
 .popup__submit {
   margin: 0 auto;
@@ -64,6 +70,9 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
 }
 
+.popup__submit-button{
+  color: $base-color;
+}
 
 .popup__close-icon {
   position: absolute;
@@ -72,3 +81,41 @@
   height: 25px;
   width: 25px;
 }
+
+
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup:target .popup__content {
+  transform: translateY(0px, 0px);
+  opacity: 1;
+}
+
+
+.popup__input-container {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-items: space-around;
+}
+
+.popup__input:invalid + .validity:after {
+  position: absolute; content: '✖';
+  padding-left: 5px;
+  color: #8b0000;
+}
+
+.popup__input:valid + .validity:after {
+  position: absolute;
+  content: '✓';
+  padding-left: 5px;
+  color: #009000;
+}
+
+
+.popup__tel-input {
+  width: 330px;
+}
+

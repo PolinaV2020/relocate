@@ -53,16 +53,18 @@
   <div id="get-in-touch-popup" class="popup">
     <div class="popup__body">
       <div class="popup__content">
-        <a href="#get-in-touch-section" class="popup__close"><img class="popup__close-icon" src="img/close-icon.png"></img></a>
-        <div class="popup__title">Please leave your phone number</div>
-        <input type="tel" class="popup__input">
-        <button class="popup__submit">Send</button>
+        <a href="##" class="popup__close close-popup"><img class="popup__close-icon" src="img/close-icon.png"></img></a>
+        <div class="popup__title">Please leave your phone number in a format +375 29 ххх-хх-хх</div>
+        <div class="popup__input-container">
+          <div class="popup__tel-input">
+          <input type="tel" class="popup__input" required pattern="[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}">
+          <span class="validity"></span>
+        </div>
+        <button class="popup__submit"><a href="##" class="popup__submit-button close-popup">Send</a></button>
+        </div>
       </div>
     </div>
   </div>
-
-
-
-<script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
