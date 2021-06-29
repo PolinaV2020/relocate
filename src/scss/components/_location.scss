@@ -79,10 +79,6 @@
 }
 
 
-.tabs__body {
-  display: flex;
-}
-
 .location__article:target {
   display: block;
 }
@@ -192,9 +188,11 @@
 }
 
 
-.location__nav-link:hover {
+.location__nav-link:hover,
+.location__nav-link:active {
 	color: $hovered-links-color; 
 }
+
 
 .location__data {
   width: 39%;
