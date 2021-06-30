@@ -132,10 +132,17 @@
   background-color: $bright-font-color;
 }
 
-.popup__content .login__title{
+.popup__content login__title{
   text-align: center;
   font-size: 30px;
   font-weight: 600;
+}
+
+.login__title {
+  display: flex;
+  justify-content: center;
+  color: $base-color;
+  text-transform: uppercase;
 }
 
 .popup__content .login__social-icons {
