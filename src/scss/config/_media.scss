@@ -1,11 +1,17 @@
 
 @media (max-width: 1200px) {
 	
-	// rules here apply to devices from 993px to 1200px (inclusive)
-
 }
 
 @media (max-width: 992px) {	
+  .main__title-item {
+    font-size: 120px; 
+  }
+
+  .main__subtitle {
+    font-size: 180px;
+  }
+
   .burger__wrapper {
     display: block;
   }
@@ -13,13 +19,63 @@
   .header__nav {
     display: none;
   }
-	
-	// rules here apply to devices from 769px to 992px (inclusive)
-	
+
+  .more__cards {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 459px 459px;
+  grid-template-rows: 345px 345px 345px 345px;
+  grid-template-areas: 
+  "vik hamnoy"
+  "estaing"
+  "montego montego";
+}
 }
 
 @media (max-width: 768px) {
 
-	// rules here apply to devices from 0px to 768px (inclusive)
 
+
+  .main__title-item {
+    font-size: 80px; 
+    line-height: 52px;
+  }
+
+  
+  .main__subtitle {
+    font-size: 120px;
+  }
+
+  .main__details {
+    padding: 20% 0 0 20%;
+  }
+  
+  .main__button {
+    transform: scale(0.6);
+  }
+
+  .description__subtitle {
+    font-size: 50px;
+  }
+
+  .description__line {
+   display: none;
+}
+
+.description__text {
+  font-size: 16px;
+}
+ .description {
+   height: 200px;
+   width: 90%;
+   padding: 10px 0;
+ }
+
+ .description__title-box {
+   height: 50px;
+ }
+
+ .cards-item {
+  margin-bottom: 10px;
+ }
 }

@@ -1,26 +1,35 @@
 .main {
   margin: 0 auto;
   max-width: 1440px;
-  height: 812px;
+  width: 100%;
+  max-height: 812px;
+  height: 90vh;
   background: linear-gradient(356.3deg, rgba(0, 0, 0, 0.6) 3.4%, rgba(0, 0, 0, 0) 92.42%), url("../../img/main-background.jpg") no-repeat;
+  background-size: cover;
+
 
   &__container {
+    display: flex;
+    justify-content: space-around;
+    padding: 5%;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    max-height: 812px;
     width: 90%;
-    margin: 0 auto;
-    @include flex(flex, row, space-between, flex-end);
-    padding: 16% 6% 0px 6.5%;
+    flex-wrap: wrap;
   }
 
   &__title{
     display: flex;
-    justify-content: flex-end;
-    height: 100%;
+    padding-top: 8%;
     flex-direction: column;
     justify-content: center;
     text-transform: lowercase;
   }
 
   &__title-item{
+    display: flex;
+    align-items: flex-end;
     font: {
       family: $second-font;
       size: calc(120px + 16 * ((100vw - 320px) / (1280 - 320)));;
@@ -38,44 +47,47 @@
       size: calc(300px + 16 * ((100vw - 320px) / (1280 - 320)));;
       weight: 900;
     }
-    line-height: 228px;
     color: $bright-font-color;
     z-index: 10;
   }
 
+  &__details {
+    display: flex;
+    height: 100%;
+    padding-bottom: 5%;
+    max-width: 251px;
+    max-height: 88px;
+  }
+
   &__button {
-    height: 80px;
-    width: 52px;
+    height: 100%;
+    padding-right: 28px;
+    max-height: 80px;
+    max-width: 52px;
   }
 
   &__label {
-    width: 170px;
-    height: 46px;
-    padding-left: 25px;
+    height: 100%;
     font: {
     family: $main-font;
-    size: 18px;
+    size: calc(8px + 16 * ((100vw - 320px) / (1280 - 320)));
     weight: 500;
     }
     color: $bright-font-color;
     text-transform: uppercase;
     letter-spacing: 5px;
-    line-height: 23px;
-  }
-
-  &__details {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    height: 100%;
+    line-height: 30px;
   }
 }
+
+
+
 
 
 .destinations {
   @include flex(flex, row, center, center);
   flex-direction: column;
-  height: 1100px;
+  height: 140vh;
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
