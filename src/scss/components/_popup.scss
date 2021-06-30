@@ -119,3 +119,185 @@
   width: 330px;
 }
 
+
+.login-popup {
+  background-color: $base-color;
+}
+
+.popup__content {
+  width: 365px;
+  padding: 30px;
+  border-radius: $cards-border-radius;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+  background-color: $bright-font-color;
+}
+
+.popup__content .login__title{
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.popup__content .login__social-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.login__social-icons-link {
+  display: block;
+  text-align: center;
+  height: 45px;
+  width: 100%;
+  line-height: 45px;
+  border-radius: 5px;
+  font-size: 20px;
+  text-decoration: none;
+  transition: all 0.3s linear;
+}
+
+.login__social-icons-span {
+  margin-left: 5px;
+  font-size: 18px;
+}
+
+.login__social-icons-link--facebook {
+  margin-right: 5px;
+  color: $bright-font-color;
+  background: $facebook-color;
+}
+
+.login__social-icons-link--facebook:hover {
+  background: #898F9C;
+}
+
+.login__social-icons-link--twitter {
+  margin-left: 5px;
+  color: $bright-font-color;
+  background: $twitter-color;
+}
+
+.login__social-icons-link--twitter:hover {
+  background: #657786;
+}
+
+.login__form {
+  margin-top: 25px;
+}
+
+.login__form .login__input-box {
+  height: 50px;
+  width: 100%;
+  position: relative;
+  margin-top: 15px;
+}
+
+
+.login__input-box .login__input{
+  height: 100%;
+  width: 315px;
+  font-size: 17px;
+  padding-left: 45px;
+  border-radius: 5px;
+  border: 1px solid $dark-font-color;
+  outline: none;
+}
+
+.login__input-box .login__input:focus {
+  border-color:rgba(0, 0, 0, 0.15);
+}
+
+.login__input-box .login__icon {
+  position: absolute; 
+  top: 50%;
+  left: 20px;
+  color: $dark-font-color;
+  transform: translateY(-50%);
+}
+
+
+.login__form .login__option {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between; 
+}
+
+
+.login__option .login__checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.login__option-span {
+  margin-left: 5px;
+  font-size: 16px;
+  color: $base-color-2;
+}
+
+.login__option .login__forget {
+  font-size: 16px;
+  color: $base-color-2;
+}
+
+.login__button .login__input-box-input {
+  color: $bright-font-color;
+  font-size: 20px;
+  font-weight: 500;
+  height: 50px;
+  width: 100%;
+  border: none;
+  padding-left: 0;
+  background: $base-color-2;
+  cursor: pointer;
+  transition: all o.3s linear;
+}
+
+
+.login__button .login__input-box-input:hover {
+  background: $hovered-links-color;
+}
+
+.login__form .login__signup {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.login__signup-not-member {
+  font-weight: 400;
+  padding-right: 2px;
+  color: $dark-font-color;
+}
+
+.login__signup-link {
+  color: $base-color-2;
+}
+
+.login__signup {
+  display: flex;
+  padding-top: 15px;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.login__form a {
+   text-decoration: none;
+}
+
+
+.login__form a:hover {
+   text-decoration: underline;
+}
+
+
+.fas {
+  width: 20px;
+  height: 20px;
+}
+
+.fa-user{
+  background: url("../../img/login-user-icon.png");
+}
+
+.fa-lock{
+  background: url("../../img/login-password-icon.png");
+}
