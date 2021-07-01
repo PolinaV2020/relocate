@@ -2025,6 +2025,10 @@ html {
   font-weight: 600;
 }
 
+.login__title {
+  color: #00BEAC;
+}
+
 .popup__content .login__social-icons {
   margin-top: 20px;
   display: -webkit-box;
@@ -2058,20 +2062,30 @@ html {
   margin-right: 5px;
   color: #ffffff;
   background: #4267B2;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .login__social-icons-link--facebook:hover {
-  background: #898F9C;
+  background: #2d5096;
+  background: -o-linear-gradient(290deg, #2d5096 0%, #4267b2 100%);
+  background: linear-gradient(160deg, #2d5096 0%, #4267b2 100%);
 }
 
 .login__social-icons-link--twitter {
   margin-left: 5px;
   color: #ffffff;
   background: #1DA1F2;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .login__social-icons-link--twitter:hover {
-  background: #657786;
+  background: #008ee4;
+  background: -o-linear-gradient(290deg, #008ee4 0%, #1da1f2 100%);
+  background: linear-gradient(160deg, #008ee4 0%, #1da1f2 100%);
 }
 
 .login__form {
@@ -2139,6 +2153,10 @@ html {
   color: #00BEAC;
 }
 
+.login__forget a {
+  color: #00BEAC;
+}
+
 .login__button .login__input-box-input {
   color: #ffffff;
   font-size: 20px;
@@ -2155,7 +2173,9 @@ html {
 }
 
 .login__button .login__input-box-input:hover {
-  background: #00A77F;
+  background: #22c1c3;
+  background: -o-linear-gradient(290deg, #22c1c3 0%, #0ca296 100%);
+  background: linear-gradient(160deg, #22c1c3 0%, #0ca296 100%);
 }
 
 .login__form .login__signup {
