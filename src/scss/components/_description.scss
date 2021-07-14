@@ -1,5 +1,6 @@
 .description {
   @include flex(flex, column, space-between, center);
+  margin: 0 auto;
   height: 380px;
   width: 67.5%;
   padding: 90px 0px;
@@ -9,43 +10,41 @@
     height: 100px;
   }
 
-
- &__title {
-  font: {
-    family:  "Dancing Script";
-    size: calc(100px + 16 * ((100vw - 320px) / (1280 - 320)));;
+  &__title {
+    font: {
+      family: "Dancing Script";
+      size: calc(100px + 16 * ((100vw - 320px) / (1280 - 320)));
+    }
+    text-transform: lowercase;
   }
-  text-transform: lowercase;
-}
 
-&__subtitle {
-  font: {
-    family: "Circular Std Medium";
-    size: calc(80px + 16 * ((100vw - 320px) / (1280 - 320)));;
-    weight: 900;
+  &__subtitle {
+    font: {
+      family: "Circular Std Medium";
+      size: calc(80px + 16 * ((100vw - 320px) / (1280 - 320)));
+      weight: 900;
+    }
+    text-transform: lowercase;
   }
-  text-transform: lowercase;
-}
 
-&__line {
-  width: 16px;
-  height: 0px;
-  margin-bottom: 32px;
-  border-radius: 40px;
-}
-
-&__text {
-  font: {
-    family: "Circular Std Medium";
-    size: 26px;
+  &__line {
+    width: 16px;
+    height: 0px;
+    margin-bottom: 32px;
+    border-radius: 40px;
   }
-  text-align: center;
-}
-}
 
+  &__text {
+    font: {
+      family: "Circular Std Medium";
+      size: 26px;
+    }
+    text-align: center;
+  }
+}
 
 .destinations__title {
-  color: #FFD600;
+  color: #ffd600;
 }
 
 .more__title {
@@ -57,9 +56,8 @@
   color: $bright-font-color;
 }
 
-
 .more__subtitle {
-  color:  #000000;
+  color: #000000;
 }
 
 .destinations__line {
@@ -67,7 +65,7 @@
 }
 
 .more__line {
-  border: 16px dashed #CBE7E4;
+  border: 16px dashed #cbe7e4;
 }
 
 .more__text {

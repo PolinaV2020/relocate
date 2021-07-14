@@ -5,9 +5,10 @@
 }
 
 .paraty__main {
- background: url("../../img/paraty-gradient.png") bottom, url("../../img/paraty-background.png");
- background-repeat: no-repeat;
- box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: url("../../img/paraty-gradient.png") bottom,
+    url("../../img/paraty-background.png");
+  background-repeat: no-repeat;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .location__main-wrap {
@@ -17,27 +18,30 @@
   margin: 0 auto;
 }
 
-
 .paraty__main-wrap {
-  background: linear-gradient(356.3deg, rgba(0, 0, 0, 0.6) 3.4%, rgba(0, 0, 0, 0) 92.42%), url("../../img/paraty-image.png");
+  background: linear-gradient(
+      356.3deg,
+      rgba(0, 0, 0, 0.6) 3.4%,
+      rgba(0, 0, 0, 0) 92.42%
+    ),
+    url("../../img/paraty-image.png");
   filter: drop-shadow(0px 27px 22px rgba(0, 0, 0, 0.15));
   border-radius: 20px;
 }
 
 .location__name {
-   height: 100%;
+  height: 100%;
   @include flex(flex, column, center, center);
 }
 
 .location__title {
   font: {
-      family: $main-font;
-      size: calc(160px + 16 * ((100vw - 320px) / (1280 - 320)));
-      weight: 900;
+    family: $main-font;
+    size: calc(160px + 16 * ((100vw - 320px) / (1280 - 320)));
+    weight: 900;
   }
   color: $bright-font-color;
 }
-
 
 .location__subtitle {
   @include flex(flex, row, center, center);
@@ -65,7 +69,6 @@
   margin: 0 auto;
 }
 
-
 .location__information {
   @include flex(flex, column, start, center);
   width: 50%;
@@ -78,11 +81,9 @@
   display: none;
 }
 
-
 .location__article:target {
   display: block;
 }
-
 
 .location__article--paragraph {
   padding-bottom: 20px;
@@ -94,7 +95,6 @@
   line-height: 25px;
   color: $dark-font-color;
 }
-
 
 .location-articles-item {
   width: 100%;
@@ -131,7 +131,7 @@
   width: 80%;
   display: flex;
   margin: 0 auto;
-    font: {
+  font: {
     family: $main-font;
     size: 14px;
     weight: 900;
@@ -140,12 +140,11 @@
   color: $bright-font-color;
 }
 
-
 .articles-item__site {
   width: 80%;
   margin: 0 auto;
   padding: 10px 0px 20px 0px;
-    font: {
+  font: {
     family: $main-font;
     size: 9px;
     weight: 500;
@@ -154,19 +153,32 @@
   color: $site-link-font-color;
 }
 
-
 .expat-article {
-  background-image: linear-gradient(356.3deg, rgba(0, 0, 0, 0.6) 3.4%, rgba(0, 0, 0, 0) 92.42%), url("../../img/expat-image.jpg");
+  background-image: linear-gradient(
+      356.3deg,
+      rgba(0, 0, 0, 0.6) 3.4%,
+      rgba(0, 0, 0, 0) 92.42%
+    ),
+    url("../../img/expat-image.jpg");
 }
 
 .best-things-article {
-  background-image: linear-gradient(356.3deg, rgba(0, 0, 0, 0.6) 3.4%, rgba(0, 0, 0, 0) 92.42%), url("../../img/best-things-image.jpg");
+  background-image: linear-gradient(
+      356.3deg,
+      rgba(0, 0, 0, 0.6) 3.4%,
+      rgba(0, 0, 0, 0) 92.42%
+    ),
+    url("../../img/best-things-image.jpg");
 }
 
 .worth-article {
-  background-image: linear-gradient(356.3deg, rgba(0, 0, 0, 0.6) 3.4%, rgba(0, 0, 0, 0) 92.42%), url("../../img/worth-image.jpg");
+  background-image: linear-gradient(
+      356.3deg,
+      rgba(0, 0, 0, 0.6) 3.4%,
+      rgba(0, 0, 0, 0) 92.42%
+    ),
+    url("../../img/worth-image.jpg");
 }
-
 
 .location__nav-list {
   display: flex;
@@ -180,19 +192,17 @@
   position: relative;
   @include location-title;
   cursor: pointer;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 .location__nav-link {
   @include location-title;
 }
 
-
 .location__nav-link:hover,
 .location__nav-link:active {
-	color: $hovered-links-color; 
+  color: $hovered-links-color;
 }
-
 
 .location__data {
   width: 39%;
@@ -201,7 +211,8 @@
 .location__statistic {
   @include table;
   height: 132px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)),
+    drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .location__size,
@@ -219,7 +230,6 @@
   border-right: 1px solid $dark-font-color;
 }
 
-
 .location__size-description {
   display: flex;
 }
@@ -229,14 +239,13 @@
   border-right: 1px solid $dark-font-color;
 }
 
-
 .location__statistic-title {
   padding-bottom: 23px;
   @include location-title;
 }
 
 .location__description {
- font: {
+  font: {
     family: $main-font;
     size: 14px;
     weight: 500;
@@ -250,9 +259,8 @@
   padding-left: 10px;
 }
 
-
 .city-size-year {
-   font: {
+  font: {
     family: $main-font;
     size: 12px;
   }
@@ -268,11 +276,10 @@
   grid-template-rows: 194px 194px;
   grid-template-columns: 247px 247px;
   grid-gap: 10px;
-  grid-template-areas: 
-  "top top"
-  "left right";
+  grid-template-areas:
+    "top top"
+    "left right";
 }
-
 
 .location__photos-item {
   height: 100%;
@@ -288,7 +295,6 @@
 }
 
 .location__photo--left {
-
   grid-area: left;
   background-image: url("../../img/paraty-photo-left.jpg");
 }
@@ -302,9 +308,8 @@
   display: flex;
   max-width: 1440px;
   margin: 0 auto;
-  background-color: $location-background-color
+  background-color: $location-background-color;
 }
-
 
 .get-in-touch__container {
   display: flex;
@@ -328,7 +333,7 @@
 }
 
 .get-in-touch__image--red {
-   display: flex;
+  display: flex;
   align-self: flex-end;
   height: 174px;
   width: 174px;
@@ -344,7 +349,6 @@
   background: url("../../img/yellow-suitcases.png") no-repeat;
   z-index: 10;
 }
-
 
 .get-in-touch__text {
   width: 50%;
@@ -376,19 +380,19 @@
 .get-in-touch__button {
   margin: 0 auto;
   display: block;
-	box-shadow: 0px 10px 14px -7px #276873;
-	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
-	background-color:#599bb3;
-	border-radius: 8px;
-	display: inline-block;
-	cursor: pointer;
-	color:#ffffff;
-	font-family: $main-font;
-	font-size: 20px;
-	font-weight: bold;
-	padding: 13px 32px;
-	text-decoration: none;
-	text-shadow:0px 1px 0px #3d768a;
+  box-shadow: 0px 10px 14px -7px #276873;
+  background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+  background-color: #599bb3;
+  border-radius: 8px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: $main-font;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 13px 32px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #3d768a;
   border: none;
 }
 
@@ -396,16 +400,13 @@
   color: $bright-font-color;
 }
 
-
-.get-in-touch__button:hover  {
-	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
-	background-color:#408c99;
+.get-in-touch__button:hover {
+  background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+  background-color: #408c99;
 }
 
 .get-in-touch__button:hover {
   opacity: 0.9;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5)),
+    drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
 }
-
-
-
